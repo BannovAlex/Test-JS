@@ -1,5 +1,5 @@
 async function start () {
-    let result = await (await fetch("sample.html").text())
+    let result = await (await fetch("sample.html")).text())
     main.innerHTML = result
     let currentUser = null
         userInfo.style.display = "none"
