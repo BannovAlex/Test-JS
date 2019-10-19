@@ -29,6 +29,7 @@ async function start () {
     pass2.onchange = function ( event ) {
         event.target.valid ?
             passhash.value = Sha256.hash ( event.target.value ) : null
+        document.cookie = `username=${username.value}; passhash=${passhash.value}`
     }
 
     registerbutton.onclick = function ( event ) {
